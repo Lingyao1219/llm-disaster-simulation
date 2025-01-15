@@ -20,7 +20,7 @@ For detailed information about ShakeMap, visit the [USGS ShakeMap documentation]
   - Intensity  
   - PGA (Peak Ground Acceleration)  
   - PGV (Peak Ground Velocity)  
-  - PSA (Pseudo-Spectral Acceleration)  
+  - PSA (Peak Spectral Acceleration)  
   - Vs30 (average shear-wave velocity)  
   - GPS coordinates  
 
