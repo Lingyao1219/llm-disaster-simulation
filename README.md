@@ -1,1 +1,1 @@
-# llm-disaster-simulation
+# LLMs as world models: Pre-event simulation for disaster impact assessment
