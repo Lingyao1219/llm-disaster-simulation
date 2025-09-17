@@ -106,7 +106,7 @@ def load_station_data(file_path):
 
 if __name__ == "__main__":
     # Load data from JSON file
-    file_path = '2019-ridgecrest/stationlist.json'
+    file_path = '2014_napa/stationlist.json'
     try:
         stations_df = load_station_data(file_path)
         
@@ -115,8 +115,8 @@ if __name__ == "__main__":
         print(stations_df.head())
         
         # Example usage - find closest station to a given location
-        target_lat = 33.5000
-        target_lng = -112.3800
+        target_lat = 33.416167981408584	
+        target_lng = -117.599027
         
         closest = find_closest_station(target_lat, target_lng, stations_df)
         

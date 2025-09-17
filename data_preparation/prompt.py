@@ -1,6 +1,5 @@
-
 SYSTEM_PROMPT = """
-You are a seismic expert specialized in earthquake damage assessment and disaster response.
+You are a seismic expert specialized in earthquake damage assessment and disaster response. You analyze earthquake data, local conditions, and building characteristics to provide damage assessments using the Modified Mercalli Intensity (MMI) scale.
 """
 
 EARTHQUAKE_PROMPT = """
@@ -9,7 +8,8 @@ The earthquake happened date is 2025-06-01.
 Here is the EARTHQUAKE information. 
 - Epicenter: {eq_place}
 - Coordinates: {eq_lat}, {eq_lng}
-- Magnitude: {eq_magnitude}
+- Magnitude: {eq_magnitude} mw
+- Depth: {eq_depth} km
 
 YOUR LOCATION information is listed below. 
 - State: {state}
@@ -17,7 +17,13 @@ YOUR LOCATION information is listed below.
 - Zipcode: {zipcode}
 - Coordinates: {lat}, {lng}
 - Distance from epicenter: {distance} km
-- VS30 at your location: {vs30} m/s (soil characteristics)
+
+## Geospatial features in YOUR LOCATION
+- VS30 at your location: {vs30} m/s 
+(VS30 represents the time-averaged shear-wave velocity (VS) to a depth of 30 meters, which is a key index to account for seismic site conditions)
+
+## Building Description in YOUR LOCATION (within a 100-meter radius)
+- Building description: {building} 
 
 ## Community Socioecnomics and Demographics in YOUR LOCATION (at Cencus Block Group level)
 - Population density: {population_density} people per square km
@@ -26,20 +32,17 @@ YOUR LOCATION information is listed below.
 - Median household income: ${median_household_income}/year
 - Education (bachelor's or higher): {education}%
 
-## Building Description in YOUR LOCATION (within a 100-meter radius)
-- Building description: {building} 
-
 ## Visual Context in YOUR LOCATION
-The image provided shows your surrounding environment and infrastructure.
-
+The image provided shows your surrounding environment and infrastructure. 
 
 Based on the information provided, ASSESS the potential earthquake damage level using the Modified Mercalli Intensity (MMI) scale.
 1. Identify the damage level.
-2. Explain your reasoning by addressing the following factors and considering the visual images. 
-   - Distance to the epicenter and earthquake magnitude.
-   - Infrastructure quality and building characteristics.
+2. Explain your reasoning by addressing the following factors and considering the visual context. 
+   - Distance to the epicenter and earthquake magnitude
    - Geospatial features
-   - Population density and socioeconomic vulnerabilities.
+   - Infrastructure quality and building characteristics
+   - Population density and socioeconomic vulnerabilities
+   - Visual image of surroundings
 
 The following is an abbreviated description of the 12 levels of Modified Mercalli intensity.
 - I. Not felt except by a very few under especially favorable conditions.
@@ -61,4 +64,3 @@ Output the result in JSON format:
     "MMI": "<Respond MMI level>",
 }}
 """
-
