@@ -25,14 +25,12 @@ llm-disaster-simulation/
 
 ## Earthquake Datasets
 
-The project includes four major earthquake events with complete USGS ShakeMap products:
+The project includes two major earthquake events with complete USGS ShakeMap products:
 
 | Event ID | Name | Magnitude | Date | Location |
 |----------|------|-----------|------|----------|
 | ci38457511 | Ridgecrest | M 7.1 | 2019 | Ridgecrest, CA |
-| ci14607652 | Sierra El Mayor | M 7.2 | 2010 | Mexico |
-| nc21323712 | San Simeon | M 6.5 | 2003 | San Simeon, CA |
-| ci3144585 | Northridge | M 6.7 | 1994 | Northridge, CA |
+| nc72282711 | Napa | M 6.0 | 2014 | Napa, CA |
 
 See [eq_data/README.md](eq_data/README.md) for detailed earthquake data structure.
 
@@ -122,37 +120,22 @@ Analyze results and generate visualizations:
 
 ```bash
 # LLM APIs
-openai
-anthropic
-together
-google-generativeai
+openai, anthropic, together, google-generativeai
 
 # Local Inference
-vllm
-torch
+vllm, torch
 
 # Data Processing
-pandas
-numpy
-geopandas
+pandas, numpy, geopandas
 
 # Geospatial
-osmnx
-shapely
-rasterio
-
-# NLP
-nltk
-beautifulsoup4
+osmnx, shapely, rasterio
 
 # ML/Stats
-scikit-learn
-scipy
+scikit-learn, scipy
 
 # Utilities
-loguru
-tqdm
-requests
+loguru, tqdm, requests
 ```
 
 ### External APIs
