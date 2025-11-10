@@ -249,8 +249,7 @@ If you use this code or methodology in your research, please cite:
 ```
 @inproceedings{li-etal-2025-llms-world,
     title = "{LLM}s as World Models: Data-Driven and Human-Centered Pre-Event Simulation for Disaster Impact Assessment",
-    author = "Li, Lingyao  and
-      Li, Dawei  and
+    author = "Li, Lingyao*  and Li, Dawei*  and
       Ou, Zhenhui  and
       Xu, Xiaoran  and
       Liu, Jingxiao  and
