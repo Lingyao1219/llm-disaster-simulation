@@ -1,6 +1,7 @@
 # LLMs as World Models: Pre-event Simulation for Disaster Impact Assessment
 
 A research project that leverages Large Language Models (LLMs) as "world models" to simulate and assess earthquake disaster impacts at the location level using multimodal geospatial data.
+![Uploading simulation.png…]()
 
 ## Overview
 
