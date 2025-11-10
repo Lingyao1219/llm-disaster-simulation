@@ -203,14 +203,6 @@ bash experiment/run_batch_api_rag.sh
 bash experiment/run_evaluation.sh
 ```
 
-## HPC Support
-
-SLURM scripts are provided for running on high-performance computing clusters:
-
-- GPU allocation: 5x A100 GPUs
-- Memory: 48GB per job
-- Tensor parallelism for large models
-
 ## Key Features
 
 - **Multimodal Input**: Combines 5 modalities (seismic, visual, building, geospatial, socioeconomic)
@@ -226,14 +218,8 @@ SLURM scripts are provided for running on high-performance computing clusters:
 If you use this code or methodology in your research, please cite:
 
 ```
-[Citation information to be added]
+[LLMs as World Models: Data-Driven and Human-Centered Pre-Event Simulation for Disaster Impact Assessment](https://aclanthology.org/2025.emnlp-main.153/) (Li et al., EMNLP 2025)
 ```
 
-## License
 
-[License information to be added]
-
-## Contact
-
-[Contact information to be added]
 
