@@ -1,6 +1,6 @@
 # LLMs as World Models: Pre-event Simulation for Disaster Impact Assessment
 
-A research project that leverages Large Language Models (LLMs) as "world models" to simulate and assess earthquake disaster impacts at the location level using multimodal geospatial data.
+Efficient simulation is essential for enhancing proactive preparedness for sudden-onset disasters such as earthquakes. Recent advancements in large language models (LLMs) as world models show promise in simulating complex scenarios. This project examines multiple LLMs to proactively estimate perceived earthquake impacts. To explore the potential, we develop an LLM-based framework to simulate how humans perceive seismic risks, as illustrated below. By integrating rich pre-event contextual information including geospatial, socioeconomic, building, and street-level imagery data, the LLMs are tasked with “reasoning” the likely severity of damage across spatial scales based on the Modified Mercalli Intensity (MMI) scale.
 
 <img width="2996" height="1352" alt="simulation" src="https://github.com/user-attachments/assets/ca0daa9f-864b-441b-8026-1bf88e6c028a" />
 
@@ -14,6 +14,9 @@ This project evaluates whether LLMs can effectively assess disaster impacts by a
 - **Geospatial Features**: Vs30 soil velocity data
 - **Socioeconomic Data**: US Census demographics (population, income, education)
 - **Visual Context**: Google Street View imagery
+
+<img width="2986" height="1658" alt="framework" src="https://github.com/user-attachments/assets/79cbf905-a0de-4c61-b93b-607b74dd5333" />
+
 
 ## Project Structure
 
