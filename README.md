@@ -222,7 +222,7 @@ We evaluate multiple LLMs on simulating MMI predictions for two earthquake event
 |-------|-------------|-----------|------|-----------|------|-----------------|------|-----------|------|
 |  |  | RMSE_Z ↓ | Corr_Z ↑ | RMSE_C ↓ | Corr_C ↑ | RMSE_Z ↓ | Corr_Z ↑ | RMSE_C ↓ | Corr_C ↑ |
 | **Closed-Source Models**  |
-| GPT-4o-2024-08-06 | ✗ | 2.43 | **0.77** | 2.37 | 0.88 | 1.97 | **0.75** | 1.91 | 0.77 |
+| GPT-4o | ✗ | 2.43 | **0.77** | 2.37 | 0.88 | 1.97 | **0.75** | 1.91 | 0.77 |
 | GPT-4.1-mini | ✗ | 2.56 | 0.61 | 2.48 | 0.67 | **0.92** | 0.64 | **0.77** | 0.76 |
 | Claude-3.5-haiku | ✗ | 2.11 | 0.58 | 2.05 | 0.70 | 1.35 | 0.59 | 1.38 | 0.71 |
 | **Open-Source Models**  |
