@@ -1,4 +1,4 @@
-# LLMs as World Models: Pre-event Simulation for Disaster Impact Assessment
+# LLMs as World Models: Pre-event Simulation for Sudden-onset Disaster Impact Assessment
 
 Efficient simulation is essential for enhancing proactive preparedness for sudden-onset disasters such as earthquakes. Recent advancements in large language models (LLMs) as world models show promise in simulating complex scenarios. This project examines multiple LLMs to proactively estimate perceived earthquake impacts. To explore the potential, we develop an LLM-based framework to simulate how humans perceive seismic risks, as illustrated below. By integrating rich pre-event contextual information including geospatial, socioeconomic, building, and street-level imagery data, the LLMs are tasked with “reasoning” the likely severity of damage across spatial scales based on the Modified Mercalli Intensity (MMI) scale.
 
