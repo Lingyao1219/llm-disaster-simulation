@@ -230,7 +230,7 @@ We evaluate multiple LLMs on simulating MMI predictions for two earthquake event
 | Llama-3.2-90B-VI | ✓ | 2.62 | 0.57 | 2.55 | 0.66 | 2.06 | 0.62 | 2.19 | 0.59 |
 | Qwen2.5-VL-3B | ✓ | 3.63 | 0.29 | 3.59 | 0.15 | 3.88 | 0.01 | 4.08 | -0.20 |
 | Qwen2.5-VL-7B | ✓ | 1.79 | 0.43 | 1.68 | 0.70 | 1.53 | 0.05 | 1.59 | -0.18 |
-| Qwen2.5-VL-32B | ✓ | **1.59** | 0.70 | **1.56** | 0.79 | **0.99** | 0.71 | 0.96 | 0.80 |
+| Qwen2.5-VL-32B | ✓ | **1.59** | 0.70 | **1.56** | 0.79 | 0.99 | 0.71 | 0.96 | 0.80 |
 | Qwen2.5-VL-72B | ✓ | 2.17 | 0.46 | 2.12 | 0.44 | 1.39 | 0.64 | 1.28 | **0.86** |
 
 **Note:** RMSE_Z and Corr_Z refer to zip code-level metrics; RMSE_C and Corr_C refer to county-level metrics. Best per-column values are highlighted in **bold**.
@@ -238,7 +238,7 @@ We evaluate multiple LLMs on simulating MMI predictions for two earthquake event
 ### Key Findings
 
 - **Strong Performance**: The best-performing models achieve reasonable correlations with USGS "Did You Feel It?" (DYFI) reports, showing alignment with human-perceived earthquake impacts.
-- **Closed-Source Advantage**: Closed-source models (GPT-4o, GPT-4.1-mini, Claude-3.5-haiku) generally outperform open-source alternatives.
+- **Closed-Source Advantage**: Closed-source models (GPT-4o, GPT-4.1-mini) generally outperform open-source alternatives.
 - **Correlation vs. RMSE Trade-off**: We observe that correlation and RMSE metrics don't always align, indicating that models can effectively rank relative severity (high correlation) while struggling with absolute MMI value prediction (high RMSE).
 
 
