@@ -218,7 +218,26 @@ bash experiment/run_evaluation.sh
 If you use this code or methodology in your research, please cite:
 
 ```
-[LLMs as World Models: Data-Driven and Human-Centered Pre-Event Simulation for Disaster Impact Assessment](https://aclanthology.org/2025.emnlp-main.153/) (Li et al., EMNLP 2025)
+@inproceedings{li-etal-2025-llms-world,
+    title = "{LLM}s as World Models: Data-Driven and Human-Centered Pre-Event Simulation for Disaster Impact Assessment",
+    author = "Li, Lingyao  and
+      Li, Dawei  and
+      Ou, Zhenhui  and
+      Xu, Xiaoran  and
+      Liu, Jingxiao  and
+      Ma, Zihui  and
+      Yu, Runlong  and
+      Deng, Min",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.153/",
+    doi = "10.18653/v1/2025.emnlp-main.153",
+    pages = "3078--3096",
+    ISBN = "979-8-89176-332-6"
+}
 ```
 
 
