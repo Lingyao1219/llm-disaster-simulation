@@ -203,7 +203,7 @@ bash experiment/run_batch_api_rag.sh
 bash experiment/run_evaluation.sh
 ```
 
-## Key Features
+### Key Features
 
 - **Multimodal Input**: Combines 5 modalities (seismic, visual, building, geospatial, socioeconomic)
 - **Modality Ablation**: Tests impact of removing specific features
@@ -212,6 +212,35 @@ bash experiment/run_evaluation.sh
 - **Data Leakage Testing**: Fairness evaluation with training data exposure
 - **Multi-LLM Comparison**: Tests 10+ different models
 - **Cost Optimization**: Batch API support for large-scale experiments
+
+
+## Main Results
+
+We evaluate multiple LLMs on simulating MMI predictions for two earthquake events: the 2014 Napa earthquake (magnitude 6.0) and the 2019 Ridgecrest earthquake (magnitude 7.1). The models are assessed at both zip code and county levels using RMSE and Pearson correlation metrics, as presented below.
+
+| Model | Open Source | 2014 Napa |  |  |  | 2019 Ridgecrest |  |  |  |
+|-------|-------------|-----------|------|-----------|------|-----------------|------|-----------|------|
+|  |  | RMSE_Z ↓ | Corr_Z ↑ | RMSE_C ↓ | Corr_C ↑ | RMSE_Z ↓ | Corr_Z ↑ | RMSE_C ↓ | Corr_C ↑ |
+| **Closed-Source Models** |  |  |  |  |  |  |  |  |  |
+| GPT-4o-2024-08-06 | ✗ | 2.43 | 0.77 | 2.37 | 0.88 | 1.97 | 0.75 | 1.91 | 0.77 |
+| GPT-4.1-mini | ✗ | 2.56 | 0.61 | 2.48 | 0.67 | **0.92** | 0.64 | **0.77** | 0.76 |
+| Claude-3.5-haiku | ✗ | 2.11 | 0.58 | 2.05 | 0.70 | 1.35 | 0.59 | 1.38 | 0.71 |
+| **Open-Source Models** |  |  |  |  |  |  |  |  |  |
+| Llama-3.2-11B-VI | ✓ | 3.19 | 0.44 | 3.05 | 0.86 | 3.22 | 0.33 | 3.22 | 0.27 |
+| Llama-3.2-90B-VI | ✓ | 2.62 | 0.57 | 2.55 | 0.66 | 2.06 | 0.62 | 2.19 | 0.59 |
+| Qwen2.5-VL-3B | ✓ | 3.63 | 0.29 | 3.59 | 0.15 | 3.88 | 0.01 | 4.08 | -0.20 |
+| Qwen2.5-VL-7B | ✓ | 1.79 | 0.43 | 1.68 | 0.70 | 1.53 | 0.05 | 1.59 | -0.18 |
+| Qwen2.5-VL-32B | ✓ | **1.59** | **0.70** | **1.56** | 0.79 | **0.99** | **0.71** | **0.96** | 0.80 |
+| Qwen2.5-VL-72B | ✓ | 2.17 | 0.46 | 2.12 | 0.44 | 1.39 | 0.64 | 1.28 | **0.86** |
+
+**Note:** RMSE_Z and Corr_Z refer to zip code-level metrics; RMSE_C and Corr_C refer to county-level metrics. Best per-column values are highlighted in **bold**.
+
+### Key Findings
+
+- **Strong Performance**: The best-performing models achieve reasonable correlations with USGS "Did You Feel It?" (DYFI) reports, showing alignment with human-perceived earthquake impacts.
+- **Closed-Source Advantage**: Closed-source models (GPT-4o, GPT-4.1-mini, Claude-3.5-haiku) generally outperform open-source alternatives.
+- **Correlation vs. RMSE Trade-off**: We observe that correlation and RMSE metrics don't always align, indicating that models can effectively rank relative severity (high correlation) while struggling with absolute MMI value prediction (high RMSE).
+
 
 ## Citation
 
